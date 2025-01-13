@@ -1,0 +1,435 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#nav {
+    width: 101.3%;
+    background-image: linear-gradient(to right, rgb(138, 43, 226), rgb(75, 0, 130)); 
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 0.5rem 0.5rem; 
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+#logo img {
+    height: 4.5rem;
+    width: 4.0rem;
+}
+
+#logo {
+    text-align: left;
+}
+
+#dropdown {
+    height: 6.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#dropdown #but {
+    background: none;
+    border: none;
+    font-size: 2.0rem;
+    color: white;
+}
+
+#dropdown h3 {
+    font-weight: 400;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    font-family: 'Oswald', sans-serif;
+}
+
+#dropdown li {
+    font-family: 'Oswald', sans-serif;
+}
+
+#search {
+    height: 6.5rem;
+    display: flex;
+    align-items: center;
+}
+
+#search #align-search {
+    height: 3.5rem;
+    width: 30.0rem;
+}
+
+#bgfree {
+    width: 100%;
+    height: 30.0rem;
+    padding: 0;
+    margin: 0;
+}
+
+#bgfree {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#h2 {
+    color: white;
+    font-size: 4.0rem;
+}
+
+#p {
+    color: white;
+    font-size: 2.0rem;
+}
+
+#lgnbtn {
+    text-decoration: none;
+    color: white;
+    font-size: 2.0rem;
+}
+
+#lgnbtn:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+#browse {
+    padding-left: 2.0rem;
+}
+
+#browse img {
+    width: 38.0rem;
+    margin-bottom: 4.0rem;
+    box-shadow: 0 8px 10px -7px black;
+}
+
+#title {
+    margin-left: 10px;
+}
+
+#editbooks img {
+    width: 18.5rem;
+    box-shadow: 0 8px 10px -7px black;
+}
+
+#trendbook #aligntrend {
+    margin-left: 85px;
+}
+
+#trendbook img {
+    width: 18.5rem;
+    box-shadow: 0 8px 10px -7px black;
+}
+
+#popularbook #alignpopular {
+    margin-left: 30px;
+}
+
+#popularbook img {
+    width: 18.0rem;
+    height: 26.0rem;
+    box-shadow: 0 8px 10px -7px black;
+}
+
+
+/* ===================================================== */
+
+#aset:hover {
+    cursor: pointer;
+}
+
+
+/* ====================================================== */
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 14px;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #000000a1;
+}
+
+.container:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+/* ================================================================= */
+
+#footer {
+    background-image: linear-gradient(rgb(138, 43, 226), rgb(75, 0, 130));
+    padding: 30px;
+    box-shadow: 0px 1px 1px black;
+}
+
+.credit {
+    font-size: 15px;
+}
+
+#footelement,
+a {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+
+#footelemnt,
+a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+#logofoot img {
+    height: 4.5rem;
+    width: 4.0rem;
+}
+
+#logofoot {
+    text-align: center;
+}
+
+@media screen and (min-width:320px) and (max-width:480px) {
+    #nav {
+        width: 107.2%;
+        display: block;
+    }
+    #logo img {
+        height: 4.5rem;
+        width: 4.0rem;
+    }
+    #bgfree {
+        width: 103.99%;
+        height: 25.0rem;
+    }
+    #h2 {
+        font-size: 22px;
+    }
+    #p {
+        font-size: 9px;
+    }
+    #lgnbtn {
+        font-size: 15px;
+    }
+    #browse img {
+        float: left;
+        width: 300px;
+        height: 170px;
+        margin-left: 70px;
+    }
+    #editbooks img {
+        height: 140px;
+        width: 110px;
+        margin-left: 35px;
+    }
+    #editbooks #edit {
+        margin-bottom: 20px;
+        float: left;
+    }
+    .overlay {
+        left: -5px;
+        width: 91.9%;
+    }
+    #trendbook #aligntrend {
+        margin-bottom: 20px;
+        float: left;
+    }
+    #trendbook img {
+        margin-left: -20px;
+        height: 140px;
+        width: 110px;
+    }
+    #popularbook #alignpopular {
+        margin-bottom: 20px;
+        float: left;
+    }
+    #popularbook img {
+        margin-left: 20px;
+        height: 140px;
+        width: 110px;
+    }
+    #title {
+        text-align: center;
+    }
+    #footer {
+        width: 103.993%;
+    }
+    #logofoot img {
+        margin-top: -40px;
+        width: 13.0rem;
+        height: 7.5rem;
+    }
+    #footer h2 {
+        font-size: 20px;
+    }
+    .credit {
+        font-size: 10px;
+    }
+    #footer #footelement,
+    a,
+    span {
+        font-size: 8px;
+    }
+}
+
+@media screen and (min-width:481px) and (max-width:768px) {
+    #nav {
+        width: 106%;
+        display: flex;
+    }
+    #logo img {
+        height: 4.5rem;
+        width: 4.0rem;
+    }
+    #bgfree {
+        width: 104.1%;
+        height: 20.0rem;
+    }
+    #h2 {
+        font-size: 22px;
+    }
+    #p {
+        font-size: 15px;
+    }
+    #lgnbtn {
+        font-size: 10px;
+    }
+    #browse img {
+        float: left;
+        width: 300px;
+        height: 170px;
+        margin-left: 50px;
+    }
+    #editbooks #edit {
+        float: left;
+        margin-left: 30px;
+    }
+    #editbooks img {
+        margin-left: 45px;
+        width: 120px;
+        height: 160px;
+        margin-bottom: 20px;
+    }
+    .overlay {
+        left: 60px;
+        width: 62%;
+        height: 74%;
+    }
+    #trendbook #aligntrend {
+        float: left;
+    }
+    #trendbook img {
+        width: 12.0rem;
+        margin-left: 45px;
+        height: 160px;
+        margin-bottom: 60px;
+    }
+    #title {
+        text-align: center;
+    }
+    #popularbook #alignpopular {
+        float: left;
+        margin-left: 20px;
+    }
+    #popularbook img {
+        width: 12.0rem;
+        margin-left: 45px;
+        height: 165px;
+        margin-bottom: 60px;
+    }
+    #footer {
+        width: 103.993%;
+    }
+    #footer .row {
+        display: flex;
+    }
+    #footer h3 {
+        font-size: 20px;
+    }
+    #footer h2 {
+        font-size: 20px;
+    }
+    .credit {
+        font-size: 10px;
+    }
+    #footer #footelement,
+    a,
+    span {
+        font-size: 10px;
+    }
+    #footelement {
+        margin-left: 100px;
+    }
+    #footer h2 span {
+        margin-left: 40px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .col-1 {
+        width: 8.33%;
+    }
+    .col-2 {
+        width: 16.66%;
+    }
+    .col-3 {
+        width: 25%;
+    }
+    .col-4 {
+        width: 33.33%;
+    }
+    .col-5 {
+        width: 41.66%;
+    }
+    .col-6 {
+        width: 50%;
+    }
+    .col-7 {
+        width: 58.33%;
+    }
+    .col-8 {
+        width: 66.66%;
+    }
+    .col-9 {
+        width: 75%;
+    }
+    .col-10 {
+        width: 83.33%;
+    }
+    .col-11 {
+        width: 91.66%;
+    }
+    .col-12 {
+        width: 100%;
+    }
+}
