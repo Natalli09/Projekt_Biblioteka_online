@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Час створення: Січ 13 2025 р., 13:58
+-- Час створення: Чрв 04 2025 р., 15:59
 -- Версія сервера: 10.4.32-MariaDB
 -- Версія PHP: 8.2.12
 
@@ -41,7 +41,14 @@ CREATE TABLE `archive` (
 --
 
 INSERT INTO `archive` (`id`, `id_user`, `id_book`, `category`, `added_on`, `bookmark_position`) VALUES
-(5, 3, 5, 'Ulubione', '2025-01-06 14:26:15', 0);
+(5, 3, 5, 'Czytam teraz', '2025-01-06 14:26:15', 0),
+(8, 3, 17, 'Gotowe', '2025-04-18 21:06:26', 0),
+(9, 3, 12, 'Ulubione', '2025-05-28 15:44:09', 0),
+(10, 3, 19, 'W planach', '2025-05-28 15:47:10', 0),
+(13, 3, 16, 'Czytam teraz', '2025-06-03 12:37:54', 0),
+(14, 4, 49, 'Ulubione', '2025-06-04 12:06:49', 0),
+(15, 4, 61, 'Czytam teraz', '2025-06-04 12:08:20', 0),
+(16, 4, 33, 'Gotowe', '2025-06-04 12:08:44', 0);
 
 -- --------------------------------------------------------
 
@@ -81,7 +88,6 @@ INSERT INTO `books` (`id_book`, `title`, `author`, `genre`, `description`, `cove
 (17, 'Kameleon', 'Rafał Kosik', 'fantasy', '\"Kameleon\" to fascynująca powieść science fiction, która przenosi czytelnika na odległą planetę Fermi, gdzie ludzka kolonia zmaga się z tajemniczymi zjawiskami. W obliczu nieprzewidywalnych zmian klimatycznych, nieustannych zagrożeń i niewytłumaczalnych zdarzeń, grupa badaczy próbuje rozwikłać zagadkę planety, której środowisko wydaje się niemal żywe. Rafał Kosik mistrzowsko buduje atmosferę napięcia, łącząc elementy naukowe z refleksją nad ludzką naturą i przetrwaniem. To książka, która zmusza do myślenia, jednocześnie wciągając czytelnika w pełen emocji świat. Idealna dla fanów ambitnej literatury science fiction.', 'uploads/677d14fda23df_878537-352x500.jpg', 2008, '2025-01-07 11:50:21', 'uploads/677d14fda2779_Kosik RafaA¦КTВ - Kameleon.pdf'),
 (18, 'Lód', 'Jacek Dukaj', 'fantasy', ' \"Lód\" to monumentalna powieść Jaceka Dukaja, która łączy historię alternatywną, filozofię i science fiction. Akcja rozgrywa się w rzeczywistości, gdzie wybuch Tunguski z 1908 roku zahamował bieg historii, powodując globalne ochłodzenie. Świat opanował lód, a wraz z nim tajemnicze, nadprzyrodzone byty – lutowie. Główny bohater, Benedykt Gierosławski, zostaje wysłany na Syberię, by odnaleźć swojego ojca, ale jego podróż szybko nabiera wymiaru metafizycznego. Dukaj tworzy wciągający, alternatywny świat, bogaty w szczegóły i pełen intelektualnych wyzwań. To książka, która angażuje zarówno wyobraźnię, jak i umysł, oferując czytelnikowi fascynującą podróż przez historię i ludzką naturę.', 'uploads/677d15571d7f5_lod-b-iext147498998.jpg', 2007, '2025-01-07 11:51:51', 'uploads/677d15571db13_Jacek Dukaj - Lo¦Бd.pdf'),
 (19, 'Szczęśliwa Ziemia', 'Łukasz Orbitowski', 'fantasy', '\"Szczęśliwa Ziemia\" to powieść łącząca elementy realizmu magicznego z mroczną, psychologiczną narracją. Historia skupia się na grupie przyjaciół z małego miasteczka, których życie na zawsze zmienia wydarzenie z młodości. Powracają po latach, aby zmierzyć się z tajemnicą i legendą, która wciąż rzuca cień na ich życie. Orbitowski, mistrzowsko balansując między rzeczywistością a iluzją, przedstawia uniwersalne tematy takie jak przyjaźń, zdrada i poszukiwanie szczęścia. Książka stanowi refleksję nad dorosłością i konsekwencjami wyborów podjętych w młodości.', 'uploads/677d15e6b5bd3_szczesliwa-ziemia-b-iext167035549.jpg', 2013, '2025-01-07 11:54:14', 'uploads/677d15e6b5f01_Szcze¦иs¦Бliwa ziemia - +Бukasz Orbitowski.pdf'),
-(20, 'Władcy Dusz: Tom I: Elizium', 'Mike A. Clearance', 'fantasy', '\"Władcy Dusz: Tom I - Elizium\" to pierwsza część epickiej sagi fantasy, w której autor Mike A. Clearance zabiera czytelnika w podróż do świata pełnego tajemnic, magii i duchowych zmagań. Głównym bohaterem jest młody wybraniec, który odkrywa swoje przeznaczenie w krainie Elizium, gdzie dusze walczą o wolność i prawdę. Na swojej drodze spotyka sojuszników i wrogów, stawiając czoła mrocznym siłom, które próbują zawładnąć światem. Pełna napięcia i zwrotów akcji fabuła wciąga w świat, gdzie każda decyzja ma konsekwencje, a walka o dusze jest równie ważna jak bitwy toczone na polach bitewnych. Powieść ta eksploruje głębokie pytania o dobro, zło i istotę ludzkiej natury.', 'uploads/677d168a9c1dc_okladka.jpg', 2016, '2025-01-07 11:56:58', 'uploads/677d168a9c761_Elizium - Mike A. Clearance.pdf'),
 (21, 'Fiolet', 'Magdalena Kozak', 'przygody', '\"Fiolet\" to wciągająca powieść science fiction autorstwa Magdaleny Kozak, w której ludzkość staje w obliczu zagrożenia z zupełnie nowej perspektywy. W książce poznajemy świat, gdzie wojna i przemoc przenikają codzienność, a zaawansowana technologia i obce formy życia zmuszają ludzi do redefinicji swoich wartości. Główna bohaterka, uwikłana w konflikt na skalę międzygalaktyczną, musi podjąć trudne decyzje, które mogą wpłynąć na losy całej ludzkości. Powieść zachwyca dynamiczną akcją, głębokimi postaciami i filozoficznymi rozważaniami nad sensem życia i człowieczeństwa. Kozak mistrzowsko łączy elementy militarnego science fiction z psychologiczną głębią, tworząc dzieło pełne napięcia i emocji.', 'uploads/677d1868de38e_126804-352x500.jpg', 2010, '2025-01-07 12:04:56', 'uploads/677d1868de73f_Kozak Magdalena - Fiolet.pdf'),
 (22, 'Kłamca. Zbiorowa Tricksteria', 'Jakub Ćwiek', 'przygody', '\"Kłamca. Zbiorowa Tricksteria\" to ostatnia część popularnej serii fantasy autorstwa Jakuba Ćwieka, koncentrującej się na postaci Lokiego – nordyckiego boga kłamstw i oszustw. W tej odsłonie Loki kontynuuje swoje pełne intryg i zaskakujących zwrotów akcji przygody, angażując się w konflikty między mitologicznymi światami. Książka jest pełna błyskotliwego humoru, dynamicznych dialogów i nieoczekiwanych wydarzeń. Ćwiek mistrzowsko łączy elementy współczesności z mitologią, tworząc unikalny świat pełen bogów, aniołów i demonów. Powieść podkreśla motywy oszustwa, manipulacji i walki o władzę, a jednocześnie porusza głębsze pytania o naturę prawdy i kłamstwa. To doskonałe zwieńczenie serii, które z pewnością zadowoli zarówno starych, jak i nowych fanów.', 'uploads/677d18dc26044_4299907264242.webp', 2020, '2025-01-07 12:06:52', 'uploads/677d18dc2646d_K+Вamca. Zbiorowa tricksteria - Jakub C¦Бwiek.pdf'),
 (23, 'Kapelusz za sto tysięcy', 'Adam Bahdaj', 'przygody', '\"Kapelusz za sto tysięcy\" to kultowa powieść młodzieżowa autorstwa Adama Bahdaja, która łączy elementy przygody i kryminału. Główna bohaterka, Krysia Cuchowska, w czasie wakacji nad morzem przypadkowo trafia na trop intrygującej zagadki związanej z tajemniczym kapeluszem, w którym ukryto cenny skarb. Razem z nowo poznanym chłopcem, Pawłem, podejmuje próbę rozwikłania tajemnicy, co prowadzi do wielu niezwykłych przygód. Książka pełna jest napięcia, humoru i wciągających zwrotów akcji, które trzymają czytelnika w napięciu do ostatniej strony. Bahdaj doskonale oddaje atmosferę wakacyjnej beztroski i młodzieńczego zapału do odkrywania tajemnic. Powieść cieszy się niesłabnącą popularnością i uważana jest za klasykę polskiej literatury dziecięcej i młodzieżowej.', 'uploads/677d192c9f946_352x500.jpg', 1966, '2025-01-07 12:08:12', 'uploads/677d192c9fca3_Bahdaj Adam 1966 - Kapelusz Za Sto TysiA¦ИTЩcy .pdf'),
@@ -95,7 +101,6 @@ INSERT INTO `books` (`id_book`, `title`, `author`, `genre`, `description`, `cove
 (31, 'Król Maciuś Pierwszy', 'Janusz Korczak', 'dla dzieci', '\"Król Maciuś Pierwszy\" to jedna z najważniejszych książek Janusza Korczaka, opowiadająca o przygodach małego chłopca, który niespodziewanie zostaje królem. Młody Maciuś stara się pogodzić dziecięce marzenia z trudną odpowiedzialnością rządzenia państwem. Zmagając się z politycznymi intrygami, wojną i reformami, próbuje stworzyć królestwo, w którym dzieci będą miały głos. To pełna ciepła, humoru i refleksji historia o dorastaniu, przyjaźni i odwadze w podejmowaniu decyzji. Książka porusza ważne tematy, takie jak demokracja, prawa dzieci i znaczenie empatii. Dzięki uniwersalnemu przesłaniu i ponadczasowym wartościom \"Król Maciuś Pierwszy\" pozostaje klasyką literatury dziecięcej.', 'uploads/677d1dfc0be01_krol-macius-pierwszy_Ox1oaSS.jpg', 1923, '2025-01-07 12:28:44', 'uploads/677d1dfc0e9db_krol-macius-pierwszy.pdf'),
 (32, 'Ten Obcy', 'Irena Jurgielewiczowa', 'dla dzieci', '\"Ten Obcy\" to jedna z najważniejszych powieści młodzieżowych autorstwa Ireny Jurgielewiczowej, która porusza temat dorastania, odpowiedzialności i empatii. Historia opowiada o grupie przyjaciół, którzy na małej wyspie spotykają tajemniczego chłopca – Zenka. Jego obecność wprowadza niepokój, ale także zacieśnia więzi między dziećmi, które starają się mu pomóc w trudnej sytuacji życiowej. Powieść wnikliwie ukazuje różne postawy wobec inności i potrzebę solidarności w obliczu problemów. To głęboko emocjonalna opowieść o przyjaźni, zrozumieniu i trudnych wyborach, z którą młodzi czytelnicy mogą się utożsamić. Książka zdobyła uznanie zarówno w Polsce, jak i za granicą, stając się klasyką literatury dziecięcej i młodzieżowej.', 'uploads/677d1e5516ccf_Ten-obcy.jpg', 1961, '2025-01-07 12:30:13', 'uploads/677d1e5516f8e_Irena Jurgielewiczowa - Ten obcy.pdf'),
 (33, 'Fourth Wing. Czwarte skrzydło', 'Rebecca Yarros', 'romance', 'Fourth Wing. Czwarte skrzydło to pierwsza część serii The Empyrean autorstwa Rebecci Yarros. Powieść opowiada historię Violet Sorrengail, młodej kobiety, która zmuszona jest do wstąpienia do brutalnej akademii wojskowej, gdzie uczniowie uczą się sztuki walki i latania na smokach. Violet, choć początkowo nieprzygotowana na surowe życie w akademii, stopniowo odkrywa swoje ukryte zdolności i staje przed trudnymi wyborami. W miarę jak zbliża się do tajemniczego i niebezpiecznego Xadena Riorsona, nie tylko musi walczyć o przetrwanie, ale także zmagać się z rosnącym uczuciem, które może ją zgubić. Powieść łączy elementy romansu, fantastyki i przygody, wciągając czytelnika w pełen emocji świat pełen smoków, walk i nieoczekiwanych zwrotów akcji.', 'uploads/677d37b2a55e8_Fourth_Wing._Czwarte_skrzydlo.jpeg', 2023, '2025-01-07 14:18:26', 'uploads/677d37b2a577e_Fourth_Wing._Czwarte_skrzydlo_dodatkowe_rozdzialy.pdf'),
-(34, 'Alfabet Urbana', ' Jerzy Urban', 'biography', 'Alfabet Urbana to książka autorstwa Jerzego Urbana, znanego dziennikarza, publicysty i byłego rzecznika prasowego rządu PRL. Jest to zbiór jego felietonów, które charakteryzują się ciętą, często kontrowersyjną i bezkompromisową formą. W książce Urban porusza szeroki wachlarz tematów – od polityki, przez społeczne zjawiska, aż po własne refleksje na temat współczesnej Polski. Jego teksty są pełne ironi, cynizmu i humoru, a autor nie unika trudnych tematów, starając się zmusić czytelnika do myślenia i konfrontacji z rzeczywistością. Książka jest więc zarówno osobistym, jak i publicystycznym spojrzeniem na zmiany, które zaszły w Polsce po 1989 roku.', 'uploads/677d381e0b2bc_alfred urbana.jfif', 2009, '2025-01-07 14:20:14', 'uploads/677d381e0b452_Jerzy Urban - Alfabet Urbana.pdf'),
 (35, 'Karl_Dedecius', 'Krzysztof A. Kuczyński', 'biography', 'Karl Dedecius to książka autorstwa Krzysztofa A. Kuczyńskiego, poświęcona życiu i twórczości jednego z najwybitniejszych tłumaczy literatury polskiej na język niemiecki – Karla Dedeciusa. Kuczyński w swojej pracy przedstawia postać Dedeciusa, który odegrał kluczową rolę w popularyzowaniu polskiej literatury w Niemczech. Autor omawia nie tylko twórczość translatorską Dedeciusa, ale także jego wkład w dialog kulturowy pomiędzy Polską a Niemcami. Książka analizuje jego filozofię tłumaczenia, proces pracy nad tekstami oraz znaczenie jego tłumaczeń dla rozwoju literackiego mostu między tymi dwoma narodami. Kuczyński skupia się na złożoności i trudności tłumaczenia literatury, ukazując Dedeciusa jako nie tylko mistrza języka, ale także jako osobę, która poprzez swoje prace wzbogaciła i pogłębiła zrozumienie polskiej kultury i literatury w niemieckojęzycznym świecie.', 'uploads/677d388f43dbf_Karl_Dedecius.jpeg', 2013, '2025-01-07 14:22:07', 'uploads/677d388f43f54_Karl_Dedecius.pdf'),
 (36, 'Moja mała trylogia', 'Beniamin Tytus Muszyński', 'biography', 'Moja mała trylogia to debiutancka powieść Beniamina Tytusa Muszyńskiego, która łączy w sobie elementy powieści obyczajowej, psychologicznej i filozoficznej. Autor przedstawia trzy różne historie, które razem tworzą refleksyjny obraz współczesnego życia i zmagań wewnętrznych bohaterów. W książce pojawiają się motywy miłości, przyjaźni, a także poszukiwania sensu życia w świecie pełnym niepewności i zmienności. Narracja jest głęboko introspektywna, a bohaterowie muszą zmierzyć się z własnymi dylematami, emocjami i wyborami. Powieść porusza kwestie tożsamości, samotności oraz relacji międzyludzkich, oferując czytelnikom wnikliwą analizę współczesnych problemów i wyzwań, z którymi zmaga się młode pokolenie.', 'uploads/677d38cde892c_Moja_mala_trylogia.jpeg', 2018, '2025-01-07 14:23:09', 'uploads/677d38cde8aee_Moja_mala_trylogia.pdf'),
 (37, 'Moje życie', 'Krystyna Śreniowska', 'biography', 'Moje życie to książka autorstwa Krystyny Śreniowskiej, która jest autobiograficzną opowieścią o życiu autorki, pełnym wyzwań, trudnych wyborów i głębokich refleksji. Śreniowska w swojej książce dzieli się osobistymi doświadczeniami, które kształtowały jej tożsamość i spojrzenie na świat. Autorka opowiada o swojej drodze życiowej, o przeszłości, która miała wpływ na jej teraźniejszość, oraz o tym, jak życie uczyło ją pokory, mądrości i odwagi. Książka jest pełna emocji i szczerości, ukazując historię, w której przewija się wątek miłości, walki o siebie i zrozumienia własnych pragnień oraz potrzeb. W \"Moim życiu\" Krystyna Śreniowska stawia pytania o sens istnienia, relacje międzyludzkie oraz to, co jest naprawdę ważne w życiu.', 'uploads/677d3924488d8_Moje życie.jpeg', 2014, '2025-01-07 14:24:36', 'uploads/677d392448a79_Moje_zycie.pdf'),
@@ -114,9 +119,55 @@ INSERT INTO `books` (`id_book`, `title`, `author`, `genre`, `description`, `cove
 (50, 'Antrakt', 'Arkadiusz Buczek', 'poezja', 'Antrakt to powieść autorstwa Arkadiusza Buczka, która porusza temat ludzkich relacji, poszukiwania sensu życia oraz radzenia sobie z osobistymi trudnościami. Fabuła książki skupia się na losach bohatera, który wkracza w okres swojego życia, w którym musi zmierzyć się z emocjonalnymi, społecznymi i psychologicznymi zawirowaniami. \"Antrakt\" to także opowieść o poszukiwaniu równowagi w świecie pełnym chaosu, o momentach zawahania i kryzysu, które każdemu z nas mogą się zdarzyć. Buczek zręcznie łączy elementy dramatu z refleksją filozoficzną, stawiając pytania o znaczenie czasu, samotności, spełnienia i nieustannych zmian w życiu. Książka ta jest również metaforą momentów zawieszenia, przerw w życiu, które w rzeczywistości bywają nieoczekiwanymi punktami przełomowymi. Autor wciąga czytelnika w głęboką, emocjonalną podróż, zmuszając do refleksji nad tym, co naprawdę ma znaczenie w życiu.', 'uploads/677d458585e41_antrakt.jfif', 2021, '2025-01-07 15:17:25', 'uploads/677d4585861c8_Arkadiusz Buczek - Antrakt.pdf'),
 (51, 'Milimetry naszych serc', 'Kinga Michałowska', 'poezja', 'Milimetry naszych serc to powieść autorstwa Kingi Michałowskiej, która łączy w sobie elementy romansu i literatury obyczajowej. Książka opowiada historię dwojga ludzi, którzy muszą zmierzyć się z własnymi lękami, przeszłością i skomplikowanymi emocjami, by odnaleźć prawdziwą miłość. Bohaterowie, mimo początkowych trudności, zbliżają się do siebie powoli, stopniowo przełamując bariery, które zbudowali w wyniku wcześniejszych doświadczeń życiowych. Książka porusza temat intymności, zaufania i budowania relacji, w której najdrobniejsze gesty i decyzje mają ogromne znaczenie. Michałowska wplata w swoją opowieść refleksje na temat tego, jak małe rzeczy w życiu – te „milimetry naszych serc” – potrafią decydować o tym, czy jesteśmy w stanie otworzyć się na drugiego człowieka. Jest to pełna emocji, subtelna historia o miłości, o tym, jak bardzo może ona zmienić nasze życie, a także o tym, jak ważne są te chwile, które kształtują naszą bliskość z innymi.', 'uploads/677d45d079954_Milimetry naszych serc.jfif', 2022, '2025-01-07 15:18:40', 'uploads/677d45d079dbe_Kinga Michałowska - Milimetry naszych serc.pdf'),
 (52, 'Boska komedia', 'Dante Alighieri', 'poezja', 'Boska komedia to jedno z najważniejszych dzieł literatury światowej, napisane przez włoskiego poetę Dantego Alighieriego. Jest to epicka poema, które opisuje podróż autora przez trzy krainy zaświatów: Piekło, Czyściec i Raj. Główna akcja toczy się w formie wędrówki Dantego, który po utracie ukochanej Beatrycze, zostaje prowadzone przez różne postacie. W tej podróży pomaga mu Wergiliusz, symboliczna postać rozumu i klasycznej mądrości, a potem Beatrycze, symboliczna postać boskiej miłości.\r\nBoska komedia jest nie tylko dziełem literackim, ale również głęboką refleksją filozoficzną, teologiczną i moralną. Dante w swojej wizji przedstawia zarówno społeczne, jak i religijne aspekty życia, ukazując ludzi, którzy zostali potępieni, oczyszczani lub zbawieni w zależności od ich uczynków na ziemi. Dzieło jest pełne alegorii, symboli i odniesień do średniowiecznej myśli religijnej oraz do ówczesnej polityki i kultury.\r\nBoska komedia ma także ogromne znaczenie dla rozwoju literatury i języka włoskiego, stanowiąc fundament dla późniejszych dzieł literackich. To również niezwykle ambitna wizja wszechświata, pełna poetyckich obrazów, która przez wieki inspiruje czytelników i badaczy na całym świecie.', 'uploads/677d468de9778_boska-komedia_MsFJuo1.jpg', 1320, '2025-01-07 15:21:49', 'uploads/677d468de9a19_Dante Alighieri - Boska Komedia.pdf'),
-(53, 'Iliada', 'Homer', 'poezja', 'Iliada to jeden z najstarszych i najważniejszych utworów literatury zachodniej, przypisywany starożytnemu poecie Homerowi. Jest to epos, który opisuje wydarzenia związane z wojną trojańską, a konkretnie ostatnimi miesiącami tego konfliktu. Choć nie jest pełnym zapisem całej wojny, Iliada koncentruje się na bohaterskich czynach, dramatach i sporach pomiędzy najważniejszymi postaciami wojny, takimi jak Achilles, Hektor, Agamemnon, Priam i wielu innych.\r\nGłównym wątkiem jest konflikt pomiędzy Achillesem, największym wojownikiem Greków, a Agamemnonem, wodzem greckim, który odebrał Achillesowi jego zdobycz wojenną, co doprowadziło do gniewu Achillesa i jego wycofania się z walk. Ta decyzja ma poważne konsekwencje dla przebiegu wojny, a cała opowieść pełna jest tematów honoru, zemsty, lojalności, a także refleksji nad losem i śmiercią.\r\nIliada jest także dziełem pełnym interwencji bogów, którzy wpływają na losy ludzi, prowadząc ich do zwycięstw lub klęsk. Tekst jest nie tylko opowieścią o wojnie, ale także o ludzkich namiętnościach, ludzkich słabościach oraz walce z losem. To klasyczne dzieło literackie pozostaje fundamentem dla rozumienia kultury starożytnej Grecji oraz dla literatury eposu heroicznego.\r\n\r\n', 'uploads/677d472a3f93f_e_a07r.jpg', 0, '2025-01-07 15:24:26', 'uploads/677d472a3fcfb_homer-iliada.pdf');
-INSERT INTO `books` (`id_book`, `title`, `author`, `genre`, `description`, `cover_image`, `published_year`, `created_at`, `book_file`) VALUES
-(54, 'Odyseja', 'Homer', 'poezja', 'Odyseja to jeden z najważniejszych eposów starożytnej Grecji, przypisywany Homerowi, który jest kontynuacją wydarzeń opisanych w Iliadzie. Akcja Odysei skupia się na powrocie Odyseusza, króla Itaki, do swojej ojczyzny po zakończeniu wojny trojańskiej. Jego podróż, która trwała aż 10 lat, jest pełna przygód, niebezpieczeństw oraz spotkań z mitologicznymi stworzeniami i bogami.\r\nGłównym wątkiem Odysei jest walka Odyseusza o powrót do domu, do żony Penelopy i syna Telemacha. W trakcie swojej podróży Odyseusz zmaga się z wieloma trudnościami, m.in. z cyklopem Polifemem, czarodziejką Kirke, sirenami czy władcą podziemi, Hadesem. Jednak największymi przeciwnikami są czas, własne pragnienie i pokusy, które utrudniają mu powrót.\r\nOdyseja jest nie tylko opowieścią o przygodach, ale także o mądrości, odwadze, sprycie oraz wytrwałości w dążeniu do celu. To także dzieło pełne wartości moralnych, pokazujące znaczenie lojalności, rodziny oraz honoru. Homer w Odysei ukazuje także złożoną relację między ludźmi a bogami, którzy mają ogromny wpływ na losy bohaterów.\r\nEpos ten jest fundamentem literatury epickiej i jednym z najważniejszych dzieł, które kształtowały całą tradycję literacką świata zachodniego.', 'uploads/677d479bc13bc_odyseja-b-iext130547761.jpg', 0, '2025-01-07 15:26:19', 'uploads/677d479bc16d1_Homer - Odyseja.pdf');
+(53, 'Iliada', 'Homer', 'poezja', 'Iliada to jeden z najstarszych i najważniejszych utworów literatury zachodniej, przypisywany starożytnemu poecie Homerowi. Jest to epos, który opisuje wydarzenia związane z wojną trojańską, a konkretnie ostatnimi miesiącami tego konfliktu. Choć nie jest pełnym zapisem całej wojny, Iliada koncentruje się na bohaterskich czynach, dramatach i sporach pomiędzy najważniejszymi postaciami wojny, takimi jak Achilles, Hektor, Agamemnon, Priam i wielu innych.\r\nGłównym wątkiem jest konflikt pomiędzy Achillesem, największym wojownikiem Greków, a Agamemnonem, wodzem greckim, który odebrał Achillesowi jego zdobycz wojenną, co doprowadziło do gniewu Achillesa i jego wycofania się z walk. Ta decyzja ma poważne konsekwencje dla przebiegu wojny, a cała opowieść pełna jest tematów honoru, zemsty, lojalności, a także refleksji nad losem i śmiercią.\r\nIliada jest także dziełem pełnym interwencji bogów, którzy wpływają na losy ludzi, prowadząc ich do zwycięstw lub klęsk. Tekst jest nie tylko opowieścią o wojnie, ale także o ludzkich namiętnościach, ludzkich słabościach oraz walce z losem. To klasyczne dzieło literackie pozostaje fundamentem dla rozumienia kultury starożytnej Grecji oraz dla literatury eposu heroicznego.\r\n\r\n', 'uploads/677d472a3f93f_e_a07r.jpg', 0, '2025-01-07 15:24:26', 'uploads/677d472a3fcfb_homer-iliada.pdf'),
+(54, 'Odyseja', 'Homer', 'poezja', 'Odyseja to jeden z najważniejszych eposów starożytnej Grecji, przypisywany Homerowi, który jest kontynuacją wydarzeń opisanych w Iliadzie. Akcja Odysei skupia się na powrocie Odyseusza, króla Itaki, do swojej ojczyzny po zakończeniu wojny trojańskiej. Jego podróż, która trwała aż 10 lat, jest pełna przygód, niebezpieczeństw oraz spotkań z mitologicznymi stworzeniami i bogami.\r\nGłównym wątkiem Odysei jest walka Odyseusza o powrót do domu, do żony Penelopy i syna Telemacha. W trakcie swojej podróży Odyseusz zmaga się z wieloma trudnościami, m.in. z cyklopem Polifemem, czarodziejką Kirke, sirenami czy władcą podziemi, Hadesem. Jednak największymi przeciwnikami są czas, własne pragnienie i pokusy, które utrudniają mu powrót.\r\nOdyseja jest nie tylko opowieścią o przygodach, ale także o mądrości, odwadze, sprycie oraz wytrwałości w dążeniu do celu. To także dzieło pełne wartości moralnych, pokazujące znaczenie lojalności, rodziny oraz honoru. Homer w Odysei ukazuje także złożoną relację między ludźmi a bogami, którzy mają ogromny wpływ na losy bohaterów.\r\nEpos ten jest fundamentem literatury epickiej i jednym z najważniejszych dzieł, które kształtowały całą tradycję literacką świata zachodniego.', 'uploads/677d479bc13bc_odyseja-b-iext130547761.jpg', 0, '2025-01-07 15:26:19', 'uploads/677d479bc16d1_Homer - Odyseja.pdf'),
+(61, 'Elizium', 'Mike A. Clearance', 'fantasy', 'Książka „Elizium” autorstwa Mike’a A. Clearance’a to pierwszy tom trylogii zatytułowanej „Władcy Dusz”. Jest to debiutancka powieść autora, która łączy elementy mrocznego fantasy z psychologicznym thrillerem i duchową symboliką. Głównym bohaterem jest Jarmis Reggick, członek tajemniczego bractwa, który zmaga się z własną przeszłością i zawodami związanymi z rekrutami, których szkolił. Akcja rozgrywa się w fikcyjnym świecie Velfare, gdzie pojawia się postać zdająca się znać mroczne sekrety Jarmisa. Powieść eksploruje tematy winy, odkupienia i walki z wewnętrznymi demonami, osadzając je w bogato wykreowanym świecie pełnym nadprzyrodzonych elementów. Styl autora charakteryzuje się poetyckim językiem i głęboką refleksją nad ludzką naturą. „Elizium” to propozycja dla czytelników poszukujących literatury z pogranicza fantasy i psychologicznego dramatu, z silnym naciskiem na duchowość i introspekcję. Książka dostępna jest w formie e-booka, co ułatwia jej dostępność dla szerokiego grona odbiorców. Dla miłośników literatury, która skłania do przemyśleń i oferuje głębokie przeżycia emocjonalne, „Elizium” może okazać się wartościową lekturą.', 'uploads/683d8241dd4a0_677d168a9c1dc_okladka.jpg', 2016, '2025-06-02 10:47:33', '../uploads/683d81458aa94_677d168a9c761_Elizium - Mike A. Clearance.pdf');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблиці `karty`
+--
+
+CREATE TABLE `karty` (
+  `id_karta` int(11) NOT NULL,
+  `id_user` int(11) NOT NULL,
+  `numer_karty` varchar(20) NOT NULL,
+  `waznosc` varchar(5) NOT NULL,
+  `cvv` varchar(3) NOT NULL,
+  `imie_nazwisko` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Дамп даних таблиці `karty`
+--
+
+INSERT INTO `karty` (`id_karta`, `id_user`, `numer_karty`, `waznosc`, `cvv`, `imie_nazwisko`) VALUES
+(1, 3, '7658 4578 8399 5967', '02/27', '653', 'Nataliia Liashchenko');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблиці `notifications`
+--
+
+CREATE TABLE `notifications` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `message` text NOT NULL,
+  `created_at` datetime DEFAULT current_timestamp(),
+  `is_read` tinyint(1) DEFAULT 0,
+  `type` varchar(50) DEFAULT 'info'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Дамп даних таблиці `notifications`
+--
+
+INSERT INTO `notifications` (`id`, `user_id`, `message`, `created_at`, `is_read`, `type`) VALUES
+(4, 3, 'Nowa książka \"Elizium\" została dodana do biblioteki!', '2025-06-02 12:47:33', 0, 'info'),
+(5, 4, 'Nowa książka \"Elizium\" została dodana do biblioteki!', '2025-06-02 12:47:33', 0, 'info'),
+(6, 5, 'Nowa książka \"Elizium\" została dodana do biblioteki!', '2025-06-02 12:47:33', 0, 'info');
 
 -- --------------------------------------------------------
 
@@ -139,7 +190,8 @@ CREATE TABLE `reviews` (
 
 INSERT INTO `reviews` (`id_review`, `id_user`, `id_book`, `rating`, `created_at`, `comment`) VALUES
 (1, 3, 33, 5, '2025-01-09 18:02:40', 'Bardzo fajna ksiązka'),
-(10, 4, 33, 3, '2025-01-10 00:45:18', 'not bad');
+(10, 4, 33, 3, '2025-01-10 00:45:18', 'not bad'),
+(11, 3, 28, 5, '2025-06-01 20:54:12', 'Fajno');
 
 -- --------------------------------------------------------
 
@@ -156,7 +208,7 @@ CREATE TABLE `sign_up` (
   `password` varchar(250) DEFAULT NULL,
   `status` int(11) NOT NULL DEFAULT 1,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
-  `profile_picture` longblob DEFAULT NULL
+  `profile_picture` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -164,8 +216,29 @@ CREATE TABLE `sign_up` (
 --
 
 INSERT INTO `sign_up` (`id_user`, `fname`, `lname`, `address`, `email`, `password`, `status`, `created_at`, `profile_picture`) VALUES
-(3, 'Nataliia', 'Liashchenko', 'ul. teatralna 25', 'admin1@gmail.com', 'admin123', 1, '2024-12-30 16:56:45', NULL),
-(4, 'Kateryna', 'Palii', 'ul. teatralna 25', 'Kateryna@gmail.com', 'kateryna123', 1, '2025-01-07 15:31:10', NULL);
+(3, 'Nataliia', 'Liashchenko', 'ul. teatralna 25', 'admin1@gmail.com', 'admin123', 1, '2024-12-30 16:56:45', 'profile_683eec65bc4255.81445492.jpg'),
+(4, 'Kateryna', 'Palii', 'ul. teatralna 25', 'Kateryna@gmail.com', 'kateryna123', 1, '2025-01-07 15:31:10', 'profile_683f43a755d6d1.10757601.jpg'),
+(5, 'Nataliia', 'Liashchenko', 'ul. teatralna 25', 'o671520960@gmail.com', '$2y$10$lwldySrBvxVdYZln/8TI3uqfoVrZ.7hBtsn8/yBhk2EqD0OlbuXIS', 1, '2025-05-26 20:23:17', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблиці `subscriptions`
+--
+
+CREATE TABLE `subscriptions` (
+  `user_id` int(11) NOT NULL,
+  `plan` varchar(20) NOT NULL,
+  `subscribed_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Дамп даних таблиці `subscriptions`
+--
+
+INSERT INTO `subscriptions` (`user_id`, `plan`, `subscribed_at`) VALUES
+(3, 'standard', '2025-06-04 15:35:20'),
+(4, 'free', '2025-06-04 15:35:40');
 
 --
 -- Індекси збережених таблиць
@@ -186,6 +259,20 @@ ALTER TABLE `books`
   ADD PRIMARY KEY (`id_book`);
 
 --
+-- Індекси таблиці `karty`
+--
+ALTER TABLE `karty`
+  ADD PRIMARY KEY (`id_karta`),
+  ADD KEY `id_user` (`id_user`);
+
+--
+-- Індекси таблиці `notifications`
+--
+ALTER TABLE `notifications`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`);
+
+--
 -- Індекси таблиці `reviews`
 --
 ALTER TABLE `reviews`
@@ -200,6 +287,12 @@ ALTER TABLE `sign_up`
   ADD PRIMARY KEY (`id_user`);
 
 --
+-- Індекси таблиці `subscriptions`
+--
+ALTER TABLE `subscriptions`
+  ADD PRIMARY KEY (`user_id`);
+
+--
 -- AUTO_INCREMENT для збережених таблиць
 --
 
@@ -207,25 +300,37 @@ ALTER TABLE `sign_up`
 -- AUTO_INCREMENT для таблиці `archive`
 --
 ALTER TABLE `archive`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT для таблиці `books`
 --
 ALTER TABLE `books`
-  MODIFY `id_book` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
+  MODIFY `id_book` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+
+--
+-- AUTO_INCREMENT для таблиці `karty`
+--
+ALTER TABLE `karty`
+  MODIFY `id_karta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT для таблиці `notifications`
+--
+ALTER TABLE `notifications`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT для таблиці `reviews`
 --
 ALTER TABLE `reviews`
-  MODIFY `id_review` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_review` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT для таблиці `sign_up`
 --
 ALTER TABLE `sign_up`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Обмеження зовнішнього ключа збережених таблиць
@@ -239,11 +344,29 @@ ALTER TABLE `archive`
   ADD CONSTRAINT `archive_ibfk_2` FOREIGN KEY (`id_book`) REFERENCES `books` (`id_book`) ON DELETE CASCADE;
 
 --
+-- Обмеження зовнішнього ключа таблиці `karty`
+--
+ALTER TABLE `karty`
+  ADD CONSTRAINT `karty_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `sign_up` (`id_user`);
+
+--
+-- Обмеження зовнішнього ключа таблиці `notifications`
+--
+ALTER TABLE `notifications`
+  ADD CONSTRAINT `notifications_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `sign_up` (`id_user`) ON DELETE CASCADE;
+
+--
 -- Обмеження зовнішнього ключа таблиці `reviews`
 --
 ALTER TABLE `reviews`
   ADD CONSTRAINT `fk_reviews_book` FOREIGN KEY (`id_book`) REFERENCES `books` (`id_book`),
   ADD CONSTRAINT `fk_reviews_user` FOREIGN KEY (`id_user`) REFERENCES `sign_up` (`id_user`);
+
+--
+-- Обмеження зовнішнього ключа таблиці `subscriptions`
+--
+ALTER TABLE `subscriptions`
+  ADD CONSTRAINT `subscriptions_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `sign_up` (`id_user`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

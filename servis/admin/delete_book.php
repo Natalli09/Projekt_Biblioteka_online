@@ -8,15 +8,18 @@ if (!isset($_SESSION['logid'])) {
 }
 
 // Połączenie z bazą danych
-$conn = mysqli_connect('localhost', 'root', '', 'bookstore');
+require_once __DIR__ . '/../../config/DatebaseConnector.php';
 
-// Pobranie danych użytkownika na podstawie sesji
+// Pobranie danych użytkownika
 $logid = $_SESSION['logid'];
-$query = "SELECT fname, lname, email FROM sign_up WHERE id_user = '$logid'";
-$result = mysqli_query($conn, $query);
+$query = "SELECT fname, lname, email FROM sign_up WHERE id_user = ?";
+$stmt = $conn->prepare($query);
+$stmt->bind_param("i", $logid);
+$stmt->execute();
+$result = $stmt->get_result();
 
-if ($result && mysqli_num_rows($result) > 0) {
-    $user = mysqli_fetch_assoc($result);
+if ($result && $result->num_rows > 0) {
+    $user = $result->fetch_assoc();
     $_SESSION['fname'] = $user['fname'];
     $_SESSION['lname'] = $user['lname'];
     $_SESSION['email'] = $user['email'];
@@ -32,27 +35,29 @@ if (!$user || $user['fname'] !== 'Nataliia') {
     exit;
 }
 
-// Pobranie ID książki z parametru URL
+// Pobranie ID książki
 $bookId = isset($_GET['book_id']) ? intval($_GET['book_id']) : 0;
 
-// Sprawdzenie, czy ID książki jest poprawne
 if ($bookId <= 0) {
     echo "Nieprawidłowy identyfikator książki.";
     exit();
 }
 
-// Usunięcie książki z bazy danych
+// Usuń recenzje powiązane z książką
+$sqlDeleteReviews = "DELETE FROM reviews WHERE id_book = ?";
+$stmtDeleteReviews = $conn->prepare($sqlDeleteReviews);
+$stmtDeleteReviews->bind_param('i', $bookId);
+$stmtDeleteReviews->execute();
+
+// Usuń książkę
 $sqlDeleteBook = "DELETE FROM books WHERE id_book = ?";
 $stmtDeleteBook = $conn->prepare($sqlDeleteBook);
 $stmtDeleteBook->bind_param('i', $bookId);
 
-// Wykonanie zapytania
 if ($stmtDeleteBook->execute()) {
-    // Przekierowanie po udanym usunięciu
-    header('Location: genre.php'); // Przekierowanie do listy książek
+    header('Location: genre.php');
     exit();
 } else {
     echo "Wystąpił problem podczas usuwania książki.";
 }
-
 ?>

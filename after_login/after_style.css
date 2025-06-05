@@ -1,73 +1,124 @@
+/* Reset i układ strony */
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
+
+html, body {
+    height: 100%;
+    font-family: sans-serif;
+}
+
+body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background: #fff;
+        }
+
+
+header {
+    /* position: fixed; */ /* wyłączone */
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
 
 #nav {
-    width: 101.3%;
-    background-image: linear-gradient(to right, rgb(138, 43, 226), rgb(75, 0, 130)); 
     display: flex;
     align-items: center;
-    justify-content: space-between; 
-    padding: 0.5rem 0.5rem; 
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+    justify-content: space-between;
+    padding: 0.5rem 1.5rem;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/*Read book*/
+.archive-buttons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.download-button {
+    margin-top: 20px;
+    text-align: center;
+}
+.reviews-section {
+            margin-top: 30px;
+        }
+
+.review {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+.review:last-child {
+            border-bottom: none;
+        }
+.rating {
+            color: #f39c12;
+        }
+
+
+/* Logo i dropdown */
 #logo img {
     height: 6.5rem;
     width: 12.0rem;
 }
 
-#logo {
-    text-align: center;
-}
-
 #dropdown {
-    height: 8.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 8.5rem;
 }
 
 #dropdown #but {
     background: none;
     border: none;
-    font-size: 2.0rem;
+    font-size: 2rem;
     color: white;
 }
 
-#dropdown h3 {
-    font-weight: 400;
-    text-align: center;
-    font-family: 'Lobster', cursive;
-    font-family: 'Oswald', sans-serif;
-}
-
-#dropdown li {
-    /* font-family: 'Lobster', cursive; */
-    font-family: sans-serif;
-}
-
+/* Wyszukiwarka */
 #search {
-    height: 58px;
     display: flex;
-    margin-top: 26px;
-    align-items: left;
+    align-items: center;
+    gap: 10px;
 }
 
 #search #align-search {
     height: 3.5rem;
-    width: 30.0rem;
+    width: 30rem;
 }
 
 #search #btn {
     height: 3.5rem;
 }
 
+.section-spacing {
+    margin-top: 40px;
+}
+
+/* Logout */
 #logout a {
     text-decoration: none;
-    font-size: 2.0rem;
-    height: 6.5rem;
+    font-size: 2rem;
     color: white;
     display: flex;
     align-items: center;
@@ -78,53 +129,16 @@
     color: black;
 }
 
-#title {
-    text-align: center;
-}
-
-#editbooks #alignedit {
-    margin-left: 85px;
-}
-
-#editbooks img {
-    width: 18.0rem;
-    height: 26.0rem;
-    box-shadow: 0 8px 10px -7px black;
-}
-
-#trendbook #aligntrend {
-    margin-left: 85px;
-}
-
-#trendbook img {
-    width: 18.5rem;
-    box-shadow: 0 8px 10px -7px black;
-}
-
-#popularbook #alignpopular {
-    margin-left: 30px;
-}
-
+/* Obrazy książek */
+#editbooks img,
+#trendbook img,
 #popularbook img {
-    width: 18.0rem;
-    height: 26.0rem;
+    width: 18rem;
+    height: 26rem;
     box-shadow: 0 8px 10px -7px black;
 }
 
-
-/* ====================================================== */
-
-.container {
-    position: relative;
-    width: 100%;
-}
-
-.image {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
+/* Overlay */
 .overlay {
     display: flex; 
     align-items: center; 
@@ -132,268 +146,150 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 14px;
+    left: 0;
     right: 0;
-    height: 100%;
-    width: 100%;
     opacity: 0;
     transition: .5s ease;
     background-color: #000000a1;
 }
 
-.container:hover .overlay {
+.panel:hover .overlay {
     opacity: 1;
 }
 
 .text {
     color: white;
     font-size: 20px;
+    text-align: center;
+    transform: translate(-50%, -50%);
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
 }
 
-
-/* ================================================================= */
-
+/* Footer */
 #footer {
-    position: relative;
-    bottom: 0;
+    flex-shrink: 0;
     width: 100%;
-    background-image: linear-gradient(rgb(138, 43, 226), rgb(75, 0, 130));
+    background: linear-gradient(to right, #6a11cb, #2575fc);
     padding: 30px;
-    box-shadow: 0px 1px 1px black;
-}
-
-.credit {
-    font-size: 15px;
-}
-
-#footelement,
-a {
-    list-style: none;
-    text-decoration: none;
-    color: white;
-}
-
-#footelemnt,
-a:hover {
-    text-decoration: none;
-    color: white;
+    box-shadow: 0px -1px 2px rgba(0,0,0,0.2);
 }
 
 #logofoot img {
     height: 6.5rem;
-    width: 12.0rem;
+    width: 12rem;
 }
 
-#logofoot {
+#footelement,
+#footelement a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+#footelement a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.credit {
+    font-size: 13px;
     text-align: center;
+    margin-top: 10px;
+}
+/* Karty książek - wyrównana wysokość */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-md-3 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 550px; /* dopasuj w razie potrzeby */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+.panel-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.book-cover {
+    display: block;
+    object-fit: contain;
+    margin: 0 auto 10px auto;
+    margin-bottom: 20px;
 }
 
 
-/* ======================media query================================== */
-
-@media screen and (min-width:320px) and (max-width:480px) {
-    #nav {
-        width: 107%;
-        display: block;
-    }
-    #logo img {
-        height: 6.5rem;
-        width: 10.0rem;
-    }
-    #search {
-        width: 30.0rem;
-        margin-left: 110px;
-    }
-    #search #align-search {
-        height: 3.5rem;
-        width: 40.0rem;
-    }
-    #search #btn {
-        height: 3.5rem;
-        text-align: center;
-    }
-    #profile {
-        height: 5.5rem;
-        font-size: 18px;
-        float: right;
-    }
-    #editbooks img {
-        margin-left: -20px;
-        height: 140px;
-        width: 110px;
-    }
-    #editbooks #alignedit {
-        margin-bottom: 20px;
-        float: left;
-    }
-    .overlay {
-        left: -5px;
-        width: 91.9%;
-    }
-    #trendbook #aligntrend {
-        margin-bottom: 20px;
-        float: left;
-    }
-    #trendbook img {
-        margin-left: -20px;
-        height: 140px;
-        width: 110px;
-    }
-    #popularbook #alignpopular {
-        margin-bottom: 20px;
-        float: left;
-    }
-    #popularbook img {
-        margin-left: 20px;
-        height: 140px;
-        width: 110px;
-    }
-    #footer {
-        width: 103.993%;
-    }
-    #logofoot img {
-        margin-top: -40px;
-        width: 13.0rem;
-        height: 7.5rem;
-    }
-    #footer h2 {
-        font-size: 20px;
-    }
-    .credit {
-        font-size: 10px;
-    }
-    #footer #footelement,
-    a,
-    span {
-        font-size: 8px;
-    }
+.equal-height {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
-@media screen and (min-width:481px) and (max-width:768px) {
+/* ========================== MEDIA QUERIES ========================== */
+
+@media (max-width: 768px) {
     #nav {
-        width: 103.9%;
-        display: flex;
+        flex-direction: column;
+        gap: 1rem;
     }
+
     #logo img {
-        height: 6.5rem;
-        width: 10.0rem;
+        height: 5rem;
+        width: 10rem;
     }
+
     #search {
-        width: 25.0rem;
+        width: 100%;
+        flex-direction: column;
     }
+
     #search #align-search {
-        height: 2.5rem;
-        width: 20.0rem;
+        width: 100%;
     }
-    #search #btn {
-        height: 2.5rem;
+
+    #footer {
         text-align: center;
     }
-    #logout a {
-        margin-left: 145px;
-    }
-    #profile {
-        height: 5.5rem;
-        font-size: 18px;
-        margin-left: 90px;
-    }
-    #editbooks img {
-        margin-left: 20px;
-    }
-    #editbooks #alignedit {
-        margin-bottom: 50px;
-        float: left;
-    }
-    .overlay {
-        left: 34px;
-        width: 78.9%;
-    }
-    #trendbook #aligntrend {
-        margin-bottom: 50px;
-        float: left;
-    }
-    #trendbook img {
-        margin-left: 20px;
-    }
-    #popularbook #alignpopular {
-        margin-left: 85px;
-        margin-bottom: 50px;
-        float: left;
-    }
-    #popularbook img {
-        margin-left: 20px;
-    }
-    #footer {
-        width: 101.993%;
-    }
-    #footer .row {
-        display: flex;
-    }
-    #footer h3 {
-        font-size: 20px;
-    }
-    #footer h2 {
-        font-size: 20px;
-    }
-    .credit {
-        font-size: 10px;
-    }
-    #footer #footelement,
-    a,
-    span {
-        font-size: 10px;
-    }
-    #footelement {
-        margin-left: 80px;
-    }
+
     #footer h2,
-    span {
-        margin-left: 40px;
+    .credit {
+        font-size: 14px;
     }
-}
 
-@media screen and (max-width:768px) {
-    .col-1 {
-        width: 8.33%;
+    #footelement,
+    #footelement a,
+    span {
+        font-size: 12px;
     }
-    .col-2 {
-        width: 16.66%;
+
+    #editbooks img,
+    #trendbook img,
+    #popularbook img {
+        width: 110px;
+        height: 140px;
     }
-    .col-3 {
-        width: 25%;
-    }
-    .col-4 {
-        width: 33.33%;
-    }
-    .col-5 {
-        width: 41.66%;
-    }
-    .col-6 {
-        width: 50%;
-    }
-    .col-7 {
-        width: 58.33%;
-    }
-    .col-8 {
-        width: 66.66%;
-    }
-    .col-9 {
-        width: 75%;
-    }
-    .col-10 {
-        width: 83.33%;
-    }
-    .col-11 {
-        width: 91.66%;
-    }
-    .col-12 {
+
+    .overlay {
+        left: 0;
         width: 100%;
     }
 }

@@ -39,7 +39,6 @@
     <h2 id="h2" class="">WIELE EBOOKÓW. NIEDROGIE I DOSTĘPNE</h2>
     <p id="p">Witamy w przyjaznej bibliotece sąsiedzkiej. Zapoznaj się z naszą kolekcją ponad 50 000 książek elektronicznych dostępnych w bezkonkurencyjnych cenach, gotowych do odkrycia.
     </p>
-    <a type="submit" class="btn btn-lg" data-toggle="modal" data-target="#myModal" id="lgnbtn">login/signup</a>
     <div class="modal fade" id="myModal" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">

@@ -1,6 +1,6 @@
 <?php
 // Połączenie z bazą danych
-require_once 'app/core/DatabaseConnector.php'; // Upewnij się, że ten plik obsługuje połączenie z bazą
+require_once '../config/DatabaseConnector.php'; // Upewnij się, że ten plik obsługuje połączenie z bazą
 
 // Sprawdzenie, czy użytkownik jest zalogowany
 if (isset($_SESSION['logid'])) {
